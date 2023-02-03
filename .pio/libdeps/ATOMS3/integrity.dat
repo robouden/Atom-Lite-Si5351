@@ -1,0 +1,6 @@
+m5stack/M5AtomS3@^0.0.1
+lib/led_strip
+lib/infrared_tools
+lovyan03/LovyanGFX@^0.4.18
+tanakamasayuki/I2C MPU6886 IMU@^1.0.0
+fastled/FastLED@^3.5.0
