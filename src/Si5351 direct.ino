@@ -47,7 +47,15 @@ uint8_t MS_ADDR;
 void setup(){
 Serial.begin(9600);
 delay(1000);
-M5.begin(); 
+// M5.begin(); 
+Serial.print("setup ok");
+M5.begin(true, false,
+             true);  // Init Atom-Matrix(Initialize serial port, LED).  初始化
+                     // ATOM-Matrix(初始化串口、LED点阵)
+    delay(50);                    // delay 50ms.  延迟50ms
+    M5.dis.drawpix(0, 0x00ff00);  // Light the LED with the specified RGB color
+                                  // 00ff00(Atom-Matrix has only one light).
+                                  // 以指定RGB颜色0x00ff00点亮第0个LED
 
 Wire.begin(25,21);
 Si5351_init(); //Si5351Aの初期化
