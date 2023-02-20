@@ -66,7 +66,7 @@ frequency = 27120000;
 divider = 900000000 / frequency;
 if (divider % 2) divider--;
 PLL_Set('A',frequency,divider);
-Si5351_write(CLK0_CTRL,0x4C); //CLK0 Sorce PLLA
+Si5351_write(CLK0_CTRL,0x4F); //CLK0 Sorce PLLA
 MS_Set(0,divider);
 
 //PLLB=900MHz
